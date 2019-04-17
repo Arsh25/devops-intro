@@ -11,8 +11,6 @@ jobs:
 
     steps:
       - checkout
-
       - run:
         name: run tests
-        command: |
-          python kitty_tests.py
+        command: 'python kitty_tests.py'
