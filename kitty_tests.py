@@ -34,7 +34,24 @@ class KittyTests(unittest.TestCase):
         my_kitty.set_happiness(100)
         self.assertEqual(my_kitty.let_owner_sleep(), False)
         my_kitty.set_happiness(5.5)
-        self.assertEqual(my_kitty.let_owner_sleep(),False)
+        self.assertEqual(my_kitty.let_owner_sleep(), False)
+
+    def test_scratch_owner(self):
+        my_kitty = KittyStuff()
+        self.assertEqual(my_kitty.scratch_owner(), True)
+        my_kitty.set_happiness(2)
+        self.assertEqual(my_kitty.scratch_owner(), True)
+        my_kitty.set_happiness(4)
+        self.assertEqual(my_kitty.scratch_owner(), True)
+        my_kitty.set_happiness(5)
+        self.assertEqual(my_kitty.scratch_owner(), False)
+        my_kitty.set_happiness(10)
+        self.assertEqual(my_kitty.scratch_owner(), False)
+        my_kitty.set_happiness(100)
+        self.assertEqual(my_kitty.scratch_owner(), False)
+        my_kitty.set_happiness(0)
+        self.assertEqual(my_kitty.scratch_owner(), True)
+
 
 
 if __name__=='__main__':
