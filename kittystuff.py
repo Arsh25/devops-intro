@@ -7,7 +7,7 @@ class KittyStuff:
         self.enemies.append('dog')
         self.happiness = 0
 
-    def purr(self,happiness_level=0):
+    def purr(self, happiness_level=0):
         purring = 'purr'
         for i in range(0, happiness_level):
             purring += '!'
@@ -18,3 +18,6 @@ class KittyStuff:
 
     def let_owner_sleep(self):
         return self.happiness < 5
+
+    def scratch_owner(self):
+        return True

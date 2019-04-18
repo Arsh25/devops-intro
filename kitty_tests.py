@@ -7,6 +7,10 @@ class KittyTests(unittest.TestCase):
         my_kitty = KittyStuff()
         self.assertEqual(my_kitty.purr(),'purr')
         self.assertEqual(my_kitty.purr(1),'purr!')
+        self.assertEqual(my_kitty.purr(2),'purr!!')
+        self.assertEqual(my_kitty.purr(1), 'purr!')
+        self.assertEqual(my_kitty.purr(5), 'purr!!!!!')
+        self.assertEqual(my_kitty.purr(0), 'purr')
 
     def test_setting_happiness(self):
         my_kitty = KittyStuff()
